@@ -1,0 +1,13 @@
+api:
+   IP: charter.orbiwise.com
+   userid: pwc_poc
+   password: Charterpwc123
+   DEV: '70B3D5A31FFFFF97'
+
+
+Login:
+   user: 
+   password: Charter123
+
+Device:
+   port: COM7

@@ -9,7 +9,7 @@ import serial
 
 def open_com(port):
     global ser
-    ser = serial.Serial(port,115200, timeout=20)
+    ser = serial.Serial(port,9600, timeout=20)
 
 def close_com():
     ser.close()
@@ -17,7 +17,8 @@ def close_com():
 def ser_read():
     #with serial.Serial(port, 115200, timeout=20) as ser:
     for _ in range(1):
-            w = ser.write(b'start_scan_test 1' + b'\n')
+            #w = ser.write(b'start_scan_test 1' + b'\n')
+            w = ser.write(b'at+cmsghex=aa88ff' + b'\n')
             for _ in range(1):
                 line = ser.readlines()  # read a '\n' terminated line
                 print(line)

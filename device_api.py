@@ -22,9 +22,10 @@ data_api = data['api']
 
 IP = data_api['IP']
 DEV = data_api['DEV']
+#URL: https://host[:port]/rest/nodes/{deveui}/payloads/ul/latest
 #url = 'https://'+ IP +':50001/rest/nodes/'
 #url = 'https://'+ IP +'/rest/nodes/70B3D5A31FFFFF95/status'# +DEV+ 'status' #'payloads/ul'
-url = 'https://'+ IP + '/rest/nodes/'+ DEV + '/payloads/ul/latest'
+url = 'https://' + IP  + '/rest/nodes/' + DEV + '/payloads/ul/latest'
 
 userid= data_api['userid']
 password= data_api['password']

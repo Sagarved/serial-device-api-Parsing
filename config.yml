@@ -1,8 +1,11 @@
 api:
-   IP: charter.orbiwise.com
-   userid: pwc_poc
-   password: Charterpwc123
-   DEV: '70B3D5A31FFFFF97'
+   IP1: charter.orbiwise.com
+   IP2: staging.lorawan.spectrum.net:8443
+   IP: staging.lorawan.spectrum.net
+   userid: range_test_lora
+   password: Charter1234!
+   DEV1: '4768C40A0043002C'
+   DEV: 474ABD91001C002C
 
 
 Login:
@@ -10,4 +13,4 @@ Login:
    password: Charter123
 
 Device:
-   port: COM7
+   port: COM6

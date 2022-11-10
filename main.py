@@ -53,11 +53,12 @@ def location(location_name):
     #This is user entered field
     #location = 211
     final_dict['location'] = str(location_name)
-    final_dict ["timestamp_current"]= str(dt.datetime.now())
+    final_dict ["timestamp_current"] = str(dt.datetime.now())
 
 
 def csv_writer():
     global final_dict
+    #print(final_dict)
     final_data_dict = pd.DataFrame([final_dict])
     final_data_dict.to_csv('gw.csv', mode='a', index= False, header= None)
     try:
@@ -78,7 +79,7 @@ def device_csv(location_name):
         et.open_com(port)
         for i in range(5):
             et.ser_read()
-            time.sleep(25) # Usually 60 seconds but as timeout of event trigger is 20 seconds we are keeping here \
+            time.sleep(5) # Usually 60 seconds but as timeout of event trigger is 20 seconds we are keeping here \
             # remaining 40 seconds. 15 seconds goes for CSV parsing and writing
             location(location_name) #Location name
             final_data() # To call an api and stored in final_dict
